@@ -6,11 +6,11 @@
 """
 
 list1 = []
-
+dict1 = {"name": "ad", "sch": 123}
 for i in range(1, 5):
-    dict1 = {"name": "ad", "sch": 123}
-    dict1['num'] = i
-    list1.append(dict1)
+    dict2 = dict1.copy()
+    dict2['num'] = i
+    list1.append(dict2)
 print list1
 
 
