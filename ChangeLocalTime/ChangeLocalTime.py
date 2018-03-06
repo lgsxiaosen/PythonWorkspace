@@ -10,8 +10,11 @@ import os
 
 
 def get_webservertime(host):
-    conn = httplib.HTTPConnection(host)
-    conn.request("GET", "/")
+    # conn = httplib.HTTPConnection(host)
+    # conn.request("GET", "/")
+    # 添加代理
+    conn = httplib.HTTPConnection('172.17.18.80', 8080)
+    conn.request("GET", host)
     r=conn.getresponse()
     #r.getheaders() #获取所有的http头
     ts=  r.getheader('date') #获取http头date部分
