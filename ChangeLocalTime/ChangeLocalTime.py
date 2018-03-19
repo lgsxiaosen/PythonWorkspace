@@ -39,6 +39,8 @@ def get_webservertime(host):
 
 
 def http2(url):
+    # 没有代理
+#     h = httplib2.Http()
     h = httplib2.Http(proxy_info=httplib2.ProxyInfo(httplib2.socks.PROXY_TYPE_HTTP, '172.17.18.80', 8080))
     status, result = h.request(method='GET', uri=url)
     date = status.get("date")
