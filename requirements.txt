@@ -6,7 +6,7 @@ sympy==1.1.1
 jieba==0.39
 matplotlib==2.2.2
 wordcloud==1.4.1
-numpy==1.14.2
+numpy==1.22.0
 urlparse2==1.1.1
 wxpy==0.3.9.8
 httplib2==0.9.2
